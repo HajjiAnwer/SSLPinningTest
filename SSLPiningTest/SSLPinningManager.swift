@@ -3,31 +3,29 @@ import Alamofire
 
 class SSLPinningManager {
     
-    var session = Session()
+    var session = SessionManager()
     static let shared = SSLPinningManager()
     
     func enableCertificatesPinning (){
         let certificates : [SecCertificate] = getCertificates()
-        let trustPolicy = PinnedCertificatesTrustEvaluator(
+        let trustPolicy = ServerTrustPolicy.pinCertificates(
             certificates: certificates,
-            acceptSelfSignedCertificates: false,
-            performDefaultValidation: true,
+            validateCertificateChain: true,
             validateHost: true)
         let trustPolicies = ["www.google.com": trustPolicy]
-        let policyManager = ServerTrustManager(evaluators: trustPolicies)
-        session = Session(configuration: .default, serverTrustManager: policyManager)
+        let policyManager = ServerTrustPolicyManager(policies: trustPolicies)
+        session = SessionManager(configuration: .default, serverTrustPolicyManager: policyManager)
     }
     
     func testEnableCertificatesPinning (){
         let certificates : [SecCertificate] = []
-        let trustPolicy = PinnedCertificatesTrustEvaluator(
+        let trustPolicy = ServerTrustPolicy.pinCertificates(
             certificates: certificates,
-            acceptSelfSignedCertificates: false,
-            performDefaultValidation: true,
+            validateCertificateChain: true,
             validateHost: true)
         let trustPolicies = ["www.google.com": trustPolicy]
-        let policyManager = ServerTrustManager(evaluators: trustPolicies)
-        session = Session(configuration: .default, serverTrustManager: policyManager)
+        let policyManager = ServerTrustPolicyManager(policies: trustPolicies)
+        session = SessionManager(configuration: .default, serverTrustPolicyManager: policyManager)
     }
     
     private func getCertificates() -> [SecCertificate] {

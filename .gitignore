@@ -1,1 +1,4 @@
-Pods\
+# CocoaPods
+Pods/
+# Certificate
+*.cer

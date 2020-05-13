@@ -10,20 +10,18 @@ import Alamofire
 
 class ViewController: UIViewController {
 
-    var session = Session()
+    var session = SessionManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = URL(string: "https://www.google.com")!
-        SSLPinningManager.shared.testEnableCertificatesPinning()
-        SSLPinningManager.shared.session.request(url).responseData { response in
+        SSLPinningManager.shared.session.request(url).responseData { (response) in
             if response.error == nil {
-                print("Success")
+                print("success")
                 print(response.response?.statusCode)
             } else {
-                print("Error")
+                print(response.error)
             }
         }
     }
-
 }
 
