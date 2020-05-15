@@ -1,11 +1,11 @@
+////
+////  SceneDelegate.swift
+////  SSLPiningTest
+////
+////  Created by Hajji Anwer on 5/12/20.
+////  Copyright © 2020 Hajji Anwer. All rights reserved.
+////
 //
-//  SceneDelegate.swift
-//  SSLPiningTest
-//
-//  Created by Hajji Anwer on 5/12/20.
-//  Copyright © 2020 Hajji Anwer. All rights reserved.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

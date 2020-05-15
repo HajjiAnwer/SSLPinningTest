@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B90F2E138CEF44FDD6934C2 /* Pods_SSLPiningTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B51A9593BB96017441E98F /* Pods_SSLPiningTest.framework */; };
 		F24F72E8246A378000EC113D /* SSLPinningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24F72E7246A378000EC113D /* SSLPinningManager.swift */; };
-		F24F72EE246B43B100EC113D /* google.cer in Resources */ = {isa = PBXBuildFile; fileRef = F24F72ED246B43B100EC113D /* google.cer */; };
+		F283C8E7246CC793006D1211 /* google.cer in Resources */ = {isa = PBXBuildFile; fileRef = F283C8E6246CC793006D1211 /* google.cer */; };
 		F2E51227246A345B00E94F48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E51226246A345B00E94F48 /* AppDelegate.swift */; };
 		F2E51229246A345B00E94F48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E51228246A345B00E94F48 /* SceneDelegate.swift */; };
 		F2E5122B246A345B00E94F48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5122A246A345B00E94F48 /* ViewController.swift */; };
@@ -22,7 +22,7 @@
 		39B51A9593BB96017441E98F /* Pods_SSLPiningTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSLPiningTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7AB860CBE5A2819FC24C3C7 /* Pods-SSLPiningTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSLPiningTest.debug.xcconfig"; path = "Target Support Files/Pods-SSLPiningTest/Pods-SSLPiningTest.debug.xcconfig"; sourceTree = "<group>"; };
 		F24F72E7246A378000EC113D /* SSLPinningManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSLPinningManager.swift; sourceTree = "<group>"; };
-		F24F72ED246B43B100EC113D /* google.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = google.cer; sourceTree = "<group>"; };
+		F283C8E6246CC793006D1211 /* google.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = google.cer; sourceTree = "<group>"; };
 		F2E51223246A345B00E94F48 /* SSLPiningTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSLPiningTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E51226246A345B00E94F48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E51228246A345B00E94F48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		F2E5121A246A345B00E94F48 = {
 			isa = PBXGroup;
 			children = (
-				F24F72ED246B43B100EC113D /* google.cer */,
+				F283C8E6246CC793006D1211 /* google.cer */,
 				F2E51225246A345B00E94F48 /* SSLPiningTest */,
 				F2E51224246A345B00E94F48 /* Products */,
 				97EA12E2570DA7D682021C96 /* Pods */,
@@ -160,7 +160,7 @@
 				F2E51233246A345E00E94F48 /* LaunchScreen.storyboard in Resources */,
 				F2E51230246A345E00E94F48 /* Assets.xcassets in Resources */,
 				F2E5122E246A345B00E94F48 /* Main.storyboard in Resources */,
-				F24F72EE246B43B100EC113D /* google.cer in Resources */,
+				F283C8E7246CC793006D1211 /* google.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +362,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 758CSL22QZ;
 				INFOPLIST_FILE = SSLPiningTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +382,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 758CSL22QZ;
 				INFOPLIST_FILE = SSLPiningTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
